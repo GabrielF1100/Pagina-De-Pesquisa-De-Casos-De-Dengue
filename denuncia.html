@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Denúncia Contra a Dengue</title>
+    <link rel="icon" href="images/dengue_icon.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="scripts.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="container">
+          <div class="images-top">
+            <img src="images/dengue_black.png" alt="Mosquito da Dengue" />
+            <img
+              src="images/denuncia_white.png"
+              alt="Denúncia de Focos de Dengue"
+            />
+          </div>
+
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="cadastro.html">Cadastro</a></li>
+            <li><a href="denuncia.html" class="active">Denunciar</a></li>
+            <li><a href="informes.html">Informações</a></li>
+            <li><a href="perfil.html">Perfil</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <div class="container">
+      <section>
+        <form class="complaint">
+          <h2>Denunciar Foco de Dengue</h2>
+
+          <div class="input-group">
+            <label for="estado"><strong>Estado:</strong></label>
+            <select id="estado" name="estado">
+              <option value="AC">Acre</option>
+              <option value="AL">Alagoas</option>
+              <option value="AP">Amapá</option>
+              <option value="AM">Amazonas</option>
+              <option value="BA">Bahia</option>
+              <option value="CE">Ceará</option>
+              <option value="DF">Distrito Federal</option>
+              <option value="ES">Espírito Santo</option>
+              <option value="GO">Goiás</option>
+              <option value="MA">Maranhão</option>
+              <option value="MT">Mato Grosso</option>
+              <option value="MS">Mato Grosso do Sul</option>
+              <option value="MG">Minas Gerais</option>
+              <option value="PA">Pará</option>
+              <option value="PB">Paraíba</option>
+              <option value="PR">Paraná</option>
+              <option value="PE">Pernambuco</option>
+              <option value="PI">Piauí</option>
+              <option value="RJ">Rio de Janeiro</option>
+              <option value="RN">Rio Grande do Norte</option>
+              <option value="RS">Rio Grande do Sul</option>
+              <option value="RO">Rondônia</option>
+              <option value="RR">Roraima</option>
+              <option value="SC">Santa Catarina</option>
+              <option value="SP">São Paulo</option>
+              <option value="SE">Sergipe</option>
+              <option value="TO">Tocantins</option>
+            </select>
+
+            <label for="cidade"><strong>Cidade:</strong></label>
+            <input
+              type="text"
+              id="cidade"
+              name="cidade"
+              placeholder="Informe a cidade"
+              required
+            />
+          </div>
+
+          <div class="input-group">
+            <label for="bairro"><strong>Bairro:</strong></label>
+            <input
+              type="text"
+              id="bairro"
+              name="bairro"
+              placeholder="Informe o bairro"
+              required
+            />
+
+            <label for="rua"><strong>Logradouro:</strong></label>
+            <input
+              type="text"
+              id="rua"
+              name="rua"
+              placeholder="Informe o logradouro"
+              required
+            />
+          </div>
+
+          <div class="input-group">
+            <label for="complemento"
+              ><strong
+                >Número/Complemento/Referência/Descrição do Local:</strong
+              ></label
+            >
+            <input
+              type="text"
+              id="complemento"
+              name="complemento"
+              placeholder="Descreva o local"
+              required
+            />
+          </div>
+
+          <div class="input-group">
+            <label for="descricao"
+              ><strong>Descrição da Denúncia:</strong></label
+            >
+            <textarea
+              id="descricao"
+              name="descricao"
+              placeholder="Informe a sua denúncia"
+              rows="4"
+              required
+            ></textarea>
+          </div>
+
+          <div class="center">
+            <button type="submit">Enviar Denúncia</button>
+          </div>
+        </form>
+      </section>
+    </div>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2024 Denúncia de Focos de Dengue</p>
+      </div>
+    </footer>
+  </body>
+</html>
