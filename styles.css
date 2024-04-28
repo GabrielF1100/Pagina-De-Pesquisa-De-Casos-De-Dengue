@@ -9,9 +9,12 @@ body {
   margin: 0 auto;
 }
 
-.complaint input {
+.container p {
+  text-align: justify;
+}
+
+.complaint input, select, textarea {
   width: 40%;
-  margin-bottom: 10px;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -25,13 +28,13 @@ body {
 
 .input-group {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   margin-bottom: 20px;
 }
 
 .input-group label {
   flex: 1;
-  margin-right: 10px;
+  margin-right: 20px;
   margin-left: 20px;
 }
 
@@ -56,7 +59,7 @@ body {
 }
 
 .form {
-  margin: 140px auto;
+  margin: auto;
   width: 300px;
   padding: 20px;
 }
@@ -153,11 +156,16 @@ footer {
   background-color: #f1b203;
   color: #fff;
   padding: 10px 0;
+  bottom: 0;
+  width: 100%;
+}
+
+#complaint {
   position: absolute;
   bottom: 0;
   width: 100%;
 }
 
-footer .container {
+footer .container p {
   text-align: center;
 }
