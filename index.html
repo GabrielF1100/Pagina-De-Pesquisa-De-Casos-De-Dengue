@@ -4,28 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Denúncia Contra a Dengue</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="icon" href="images/dengue_icon.png" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
   </head>
+
   <body>
     <header>
       <nav class="navbar">
-        <div class="container">
+        <div class="nav-container">
           <div class="images-top">
-            <img src="images/dengue_black.png" alt="Mosquito da Dengue" />
-            <img
-              src="images/denuncia_white.png"
-              alt="Denúncia de Focos de Dengue"
-            />
+            <a href="index.html"
+              ><img src="images/dengue_black.png" alt="Mosquito da Dengue"
+            /></a>
           </div>
 
           <ul>
             <li><a href="index.html" class="active">Início</a></li>
-            <li><a href="login.html">Login</a></li>
-            <li><a href="cadastro.html">Cadastro</a></li>
-            <li><a href="denuncia.html">Denunciar</a></li>
             <li><a href="informes.html">Informações</a></li>
-            <li><a href="perfil.html">Perfil</a></li>
+            <li><a href="login.html">Login</a></li>
           </ul>
         </div>
       </nav>
@@ -33,7 +41,9 @@
 
     <div class="container">
       <section>
-        <h2>Bem-vindo à aplicação de denúncia de focos de dengue</h2>
+        <div class="wellcome">
+          <h2>&#128075; Bem-vindo à página de denúncia de focos de dengue!</h2>
+        </div>
         <p>
           Aqui você pode contribuir para o combate à dengue relatando focos da
           doença.
@@ -42,16 +52,12 @@
           Além disso, oferecemos informações úteis sobre prevenção e precaução
           contra a dengue.
         </p>
-        <p>Faça login ou cadastre-se para começar.</p>
+        <a href="login.html" class="button-login">Fazer Login &#128070;</a>
       </section>
     </div>
 
-    <div id="complaint">
-      <footer>
-        <div class="container">
-          <p>&copy; 2024 Denúncia de Focos de Dengue</p>
-        </div>
-      </footer>
-    </div>
+    <footer>
+      <p>&copy; 2024 Denúncia Contra a Dengue</p>
+    </footer>
   </body>
 </html>

@@ -4,27 +4,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Denúncia Contra a Dengue</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="icon" href="images/dengue_icon.png" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
   </head>
+
   <body>
     <header>
       <nav class="navbar">
-        <div class="container">
+        <div class="nav-container">
           <div class="images-top">
-            <img src="images/dengue_black.png" alt="Mosquito da Dengue" />
-            <img
-              src="images/denuncia_white.png"
-              alt="Denúncia de Focos de Dengue"
-            />
+            <a href="denuncia.html"
+              ><img src="images/dengue_black.png" alt="Mosquito da Dengue"
+            /></a>
           </div>
 
           <ul>
-            <li><a href="index.html">Início</a></li>
-            <li><a href="login.html">Login</a></li>
-            <li><a href="cadastro.html">Cadastro</a></li>
             <li><a href="denuncia.html">Denunciar</a></li>
-            <li><a href="informes.html">Informações</a></li>
             <li><a href="perfil.html" class="active">Perfil</a></li>
           </ul>
         </div>
@@ -35,6 +42,7 @@
       <section>
         <h2>Seu Perfil</h2>
 
+        <hr />
         <div class="user-info">
           <h3>Informações Pessoais</h3>
           <p><strong>Nome:</strong> João</p>
@@ -42,7 +50,9 @@
           <p><strong>Email:</strong> joao@example.com</p>
           <p><strong>Telefone:</strong> (11) 1234-5678</p>
         </div>
+        <br /><br /><br />
 
+        <hr />
         <div class="user-history">
           <h3>Histórico de Denúncias</h3>
           <ul>
@@ -52,6 +62,8 @@
             <!-- Adicione mais itens conforme necessário -->
           </ul>
         </div>
+
+        <a href="login.html" class="button-login">Sair da Conta</a>
       </section>
     </div>
 

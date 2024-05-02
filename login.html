@@ -4,47 +4,61 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Denúncia Contra a Dengue</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="icon" href="images/dengue_icon.png" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
   </head>
+
   <body>
     <header>
       <nav class="navbar">
-        <div class="container">
+        <div class="nav-container">
           <div class="images-top">
-            <img src="images/dengue_black.png" alt="Mosquito da Dengue" />
-            <img
-              src="images/denuncia_white.png"
-              alt="Denúncia de Focos de Dengue"
-            />
+            <a href="index.html"
+              ><img src="images/dengue_black.png" alt="Mosquito da Dengue"
+            /></a>
           </div>
 
           <ul>
             <li><a href="index.html">Início</a></li>
-            <li><a href="login.html" class="active">Login</a></li>
-            <li><a href="cadastro.html">Cadastro</a></li>
-            <li><a href="denuncia.html">Denunciar</a></li>
             <li><a href="informes.html">Informações</a></li>
-            <li><a href="perfil.html">Perfil</a></li>
+            <li><a href="login.html" class="active">Login</a></li>
           </ul>
         </div>
       </nav>
     </header>
+
     <div class="container">
-      <form class="form">
+      <form class="form" action="denuncia.html" method="GET">
         <h2>Login</h2>
-        <input type="text" placeholder="Nome de usuário" required />
-        <input type="password" placeholder="Senha" required />
-        <button type="submit">Entrar</button>
-        <p>Não tem uma conta? <a href="cadastro.html">Cadastre-se</a></p>
+        <div class="center">
+          <input type="text" placeholder="Nome de usuário" required />
+        </div>
+        <div class="center">
+          <input type="password" placeholder="Senha" required />
+        </div>
+        <div class="center">
+          <button type="submit">Entrar</button>
+        </div>
+        <div class="space">
+          <p>Não tem uma conta? <a href="cadastro.html">Cadastre-se</a></p>
+        </div>
       </form>
     </div>
-    <div id="complaint">
-      <footer>
-        <div class="container">
-          <p>&copy; 2024 Denúncia de Focos de Dengue</p>
-        </div>
-      </footer>
-    </div>
+
+    <footer>
+      <p>&copy; 2024 Denúncia Contra a Dengue</p>
+    </footer>
   </body>
 </html>

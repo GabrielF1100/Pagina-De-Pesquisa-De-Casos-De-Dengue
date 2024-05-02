@@ -16,14 +16,16 @@ Desta forma, haverá como avisar a população sobre os lugares que contêm mais
 ```
 .
 ├── images
+├── scripts
+|  └── scripts.js
+├── styles
+|  └── styles.css
 ├── cadastro.html
 ├── denuncia.html
 ├── index.html
 ├── informes.html
 ├── login.html
 ├── perfil.html
-├── scripts.js
-├── styles.css
 └── README.md
 ```
 
