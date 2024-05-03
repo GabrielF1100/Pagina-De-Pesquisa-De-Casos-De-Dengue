@@ -5,17 +5,18 @@
 }
 
 body {
-  background-image: url("../images/background-image.png");
-  background-size: cover;
-  background-position: center;
   font-family: "Comfortaa", sans-serif;
-  background-color: #f0f0f09a;
+  background-color: #f5f5f5;
   color: #000;
   margin: 0;
   padding: 0;
 }
 
 /* Estilos para a barra de navegação */
+header{
+  background-color: #f5f5f5;
+}
+
 .navbar {
   align-items: center;
   margin-left: 70px;
@@ -51,6 +52,13 @@ body {
 }
 
 /* Estilo do conteúdo */
+.bg-main {
+  background-image: url("../images/background-image.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 30px;
+}
+
 .bg-inform {
   background-image: url("../images/background-inform.png");
   background-size: cover;
@@ -61,6 +69,47 @@ body {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
+}
+
+.content {
+  max-width: 3000px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  width: 80%;
+  margin-bottom: 30px;
+}
+
+.content-txt {
+  margin-left: 170px;
+}
+
+.containerimg {
+  width: 350px;
+  margin-left: 100px;
+  display: flex;
+}
+
+.content h2 {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: justify;
+  line-height: 46px;
+}
+
+.content h3 {
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: justify;
+  line-height: 35px;
+}
+
+.content p {
+  text-align: justify;
+  line-height: 35px;
 }
 
 .title h2 {
@@ -76,6 +125,7 @@ body {
   text-align: center;
   padding: 20px;
   background-color: #e90606;
+  border-radius: 30px 30px 0 0;
   color: #fff;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -90,6 +140,10 @@ body {
 .container p {
   max-width: 800px;
   margin: 0 auto;
+  text-align: justify;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 10px;
 }
 
 .container hr,
@@ -112,19 +166,13 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 40px;
+  margin-bottom: 27px;
 }
 
 .wellcome h2 {
+  font-weight: 800;
   font-size: 60px;
   margin-bottom: 20px;
-}
-
-p {
-  text-align: justify;
-  font-size: 16px;
-  line-height: 1.6;
-  margin-bottom: 10px;
 }
 
 .button-login {
@@ -138,6 +186,7 @@ p {
   cursor: pointer;
   margin-top: 60px;
   margin-left: 30px;
+  margin-bottom: 40px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -172,7 +221,7 @@ p {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin-bottom: 30px;
+  margin-bottom: 27px;
   font-size: 16px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -194,11 +243,10 @@ p {
 }
 
 .form p {
-  margin-top: 10px;
   text-align: center;
 }
 .form .space {
-  margin-bottom: 36px;
+  margin-bottom: 85px;
 }
 
 .form p a {
@@ -257,5 +305,5 @@ footer p {
 .active {
   font-weight: bold;
   color: #000;
-  border-bottom: 2px solid #222;
+  border-bottom: 2px solid #000;
 }
