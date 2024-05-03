@@ -65,6 +65,12 @@ header{
   background-position: center;
 }
 
+.bg-wellcome {
+  background-image: url("../images/background-wellcome.png");
+  background-size: cover;
+  background-position: center;
+}
+
 .container {
   max-width: 800px;
   margin: 0 auto;

@@ -33,7 +33,7 @@ Desta forma, haverá como avisar a população sobre os lugares que contêm mais
 
 ## 🛠 Tecnologias Utilizadas
 
-O chatbot é desenvolvido utilizando as seguintes ferramentas da AWS:
+A página Web é desenvolvida utilizando as seguintes ferramentas:
 
 - **HTML:** Linguagem de marcação utilizada na construção das páginas na Web.
 - **CSS:** Mecanismo para adicionar estilos nas páginas web.
@@ -47,6 +47,8 @@ Para iniciar o projeto localmente, siga estas etapas:
 1. Clone este repositório.
 2. Instale as dependências necessárias, como a extensão Live Server no VS Code.
 3. Execute o index.html no navegador.
+
+Para acessar o site [clique aqui](https://igormatt0s.github.io/pagina-dengue/index.html)
 
 ---
 
