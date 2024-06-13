@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Denúncia Contra a Dengue</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" />
+    <link rel="icon" href="images/dengue_icon.png" />
+    <link rel="stylesheet" href="styles/styles.css" />
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="images-top">
+                    <a href="index.html"><img src="images/dengue_black.png" alt="Mosquito da Dengue" /></a>
+                </div>
+
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="informes.html">Informações</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="admin.html" class="active">Admin</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="bg-main">
+        <div class="container">
+            <form class="form" id="registrationForm">
+                <h2>Cadastrar novos usuários</h2>
+                <div class="input-group">
+                    <input class="one" type="text" id="firstName" placeholder="Nome" required />
+                    <input class="two" type="text" id="lastName" placeholder="Sobrenome" required />
+                </div>
+                <div class="input-group">
+                    <input class="one" type="email" id="email" placeholder="Email" required />
+                    <input class="two" type="tel" id="phone" placeholder="Telefone" required />
+                </div>
+                <div class="input-group">
+                    <input class="one" type="text" id="username" placeholder="Nome de usuário" required />
+                    <input class="two" type="password" id="password" placeholder="Senha" required />
+                </div>
+                <div class="center">
+                    <button type="submit">Cadastrar</button>
+                </div>
+                <div class="center">
+                    <ul id="userList"></ul>
+                    </div>
+                    <div class="center">
+                    <button onclick="limpaLista()" type="submit">Limpar Lista</button>
+                </div>
+
+            </form>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 Denúncia Contra a Dengue</p>
+        </footer>
+    </div>
+
+    <script src="scripts/scripts.js"></script>
+</body>
+
+</html>
