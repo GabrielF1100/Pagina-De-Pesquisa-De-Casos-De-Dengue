@@ -1,6 +1,13 @@
 let userList = [];
+let count = 1;
 
-// Função para adicionar um novo usuário
+getCount();
+
+function addCount() {
+    let newCount = { id: count };
+    localStorage.setItem('Count', JSON.stringify(newCount));
+}
+
 function addUser(firstName, lastName, email, phone, username, password) {
     const dataAtual = new Date();
     const dia = dataAtual.getDate().toString().padStart(2, '0'); // Dia do mês (1-31)
@@ -8,24 +15,16 @@ function addUser(firstName, lastName, email, phone, username, password) {
     const ano = dataAtual.getFullYear();
     const data = `${dia}/${mes}/${ano}`;
 
-    let newUser = {
-        id: Math.random().toString(36).substr(2, 9),
-        date: data,
-        firstName: firstName,
-        lastName: lastName,
-        email: email,
-        phone: phone,
-        username: username,
-        password: password
-    };
+    let newUser = { id: count++, date: data, firstName: firstName, lastName: lastName, email: email, phone: phone, username: username, password: password };
     userList.push(newUser);
     localStorage.setItem('userList', JSON.stringify(userList));
     renderUserList();
 }
 
-// Função para deletar um usuário
 function deleteUser(userId) {
-    let updatedUserList = userList.filter(user => user.id !== userId);
+    let updatedUserList = userList.filter(function (user) {
+        return user.id !== userId;
+    });
 
     if (updatedUserList.length < userList.length) {
         userList = updatedUserList;
@@ -34,6 +33,15 @@ function deleteUser(userId) {
     } else {
         alert('Usuário não encontrado.');
     }
+}
+
+function excluirLista() {
+    // Limpa a lista de usuários
+    userList = [];
+    // Atualiza o localStorage
+    localStorage.setItem('userList', JSON.stringify(userList));
+    // Renderiza novamente a lista de usuários no HTML
+    renderUserList();
 }
 
 // Função para recuperar a lista de usuários do localStorage
@@ -52,9 +60,26 @@ function renderUserList() {
         listItem.innerHTML = `<span class="user-date">(Data: ${user.date})</span>
                             <span class="user-email">(Email: ${user.email})</span>
                             <span class="user-username">(Nome de Usuário: ${user.username})</span>
-                            <div><button class="delete-button" onclick="deleteUser('${user.id}')">Excluir</button></div>`;
+                            <button class="delete-button" onclick="deleteUser(${user.id})">Excluir</button>`;
         userListElement.appendChild(listItem);
     });
+}
+
+function getCount() {
+    let storedList = JSON.parse(localStorage.getItem('Count'));
+    newCount = storedList || [];
+    if (newCount.id) {
+        count = Number(newCount.id)
+    }
+}
+
+function clearFormFields() {
+    document.getElementById('firstName').value = '';
+    document.getElementById('lastName').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('phone').value = '';
+    document.getElementById('username').value = '';
+    document.getElementById('password').value = '';
 }
 
 // Recuperar a lista de usuários do localStorage
@@ -62,7 +87,6 @@ getUserList();
 // Renderizar a lista de usuários no HTML
 renderUserList();
 
-// Event listener para o formulário de registro
 document.getElementById('registrationForm').addEventListener('submit', function (event) {
     event.preventDefault();
     let firstNameInput = document.getElementById('firstName');
@@ -73,7 +97,7 @@ document.getElementById('registrationForm').addEventListener('submit', function 
     let passwordInput = document.getElementById('password');
 
     addUser(firstNameInput.value, lastNameInput.value, emailInput.value, phoneInput.value, usernameInput.value, passwordInput.value);
-
+    addCount();
     firstNameInput.value = '';
     lastNameInput.value = '';
     emailInput.value = '';
@@ -81,11 +105,3 @@ document.getElementById('registrationForm').addEventListener('submit', function 
     usernameInput.value = '';
     passwordInput.value = '';
 });
-
-// Função para limpar a lista de usuários
-function limpaLista() {
-    let userListElement = document.getElementById('userList');
-    while (userListElement.firstChild) {
-        userListElement.removeChild(userListElement.firstChild);
-    }
-}
