@@ -1,6 +1,6 @@
 # pagina-dengue
 
-# Projeto 1 - Página de Denúncias Contra a Dengue
+# Projeto - Página de Denúncias Contra a Dengue
 
 ## 💻 Descrição do Projeto
 
@@ -20,6 +20,7 @@ Desta forma, haverá como avisar a população sobre os lugares que contêm mais
 |  └── scripts.js
 ├── styles
 |  └── styles.css
+├── admin.html
 ├── cadastro.html
 ├── denuncia.html
 ├── index.html
@@ -37,6 +38,7 @@ A página Web é desenvolvida utilizando as seguintes ferramentas:
 
 - **HTML:** Linguagem de marcação utilizada na construção das páginas na Web.
 - **CSS:** Mecanismo para adicionar estilos nas páginas web.
+- **JavaScript:** Linguagem de programação utilizada para tornar as páginas web interativas e dinâmicas.
 
 ---
 
