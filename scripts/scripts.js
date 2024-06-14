@@ -15,7 +15,16 @@ function addUser(firstName, lastName, email, phone, username, password) {
     const ano = dataAtual.getFullYear();
     const data = `${dia}/${mes}/${ano}`;
 
-    let newUser = { id: count++, date: data, firstName: firstName, lastName: lastName, email: email, phone: phone, username: username, password: password };
+    let newUser = {
+        id: count++,
+        date: data,
+        firstName: firstName,
+        lastName: lastName,
+        email: email,
+        phone: phone,
+        username: username,
+        password: password
+    };
     userList.push(newUser);
     localStorage.setItem('userList', JSON.stringify(userList));
     renderUserList();
@@ -105,3 +114,34 @@ document.getElementById('registrationForm').addEventListener('submit', function 
     usernameInput.value = '';
     passwordInput.value = '';
 });
+
+function addUserSearch() {
+    userSearch = { id }
+}
+
+function searchUsers() {
+    let emailInput = document.getElementById('email');
+    let arraySearch = [];
+
+    let userListElement = document.getElementById('userList');
+    userListElement.innerHTML = ''; // Limpa o conteúdo HTML do elemento userListElement
+    for (let i = 0; i < userList.length; i++) {
+        if (userList[i].email === emailInput.value) {
+            let userSearch = {
+                id: userList[i].id,
+                date: userList[i].date,
+                email: userList[i].email,
+                username: userList[i].username
+            };
+            arraySearch.push(userSearch);
+        }
+    }
+    arraySearch.forEach(function (user) {
+        let listItem = document.createElement('li');
+        listItem.innerHTML = `<span class="user-date">(Data: ${user.date})</span>
+                            <span class="user-email">(Email: ${user.email})</span>
+                            <span class="user-username">(Nome de Usuário: ${user.username})</span>
+                            <button class="delete-button" onclick="deleteUser(${user.id})">Excluir</button>`;
+        userListElement.appendChild(listItem);
+    });
+}
