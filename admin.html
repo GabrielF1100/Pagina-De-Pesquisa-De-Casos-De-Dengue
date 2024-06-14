@@ -51,12 +51,16 @@
                 </div>
                 <div class="center">
                     <button type="submit">Cadastrar</button>
+                    <button onclick="clearFormFields()">Limpar Campos</button>
+                </div>
+                <div class="center">
+                    <button onclick="searchUsers()">Pesquisar</button>
                 </div>
                 <div class="center">
                     <ul id="userList"></ul>
-                    </div>
-                    <div class="center">
-                    <button onclick="limpaLista()" type="submit">Limpar Lista</button>
+                </div>
+                <div class="center">
+                    <button onclick="excluirLista()" type="submit">Excluir Lista</button>
                 </div>
 
             </form>
@@ -67,7 +71,7 @@
         </footer>
     </div>
 
-    <script src="scripts/scripts.js"></script>
+    <script src="scripts/scripts.js"> </script>
 </body>
 
 </html>
