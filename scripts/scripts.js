@@ -65,11 +65,11 @@ function renderUserList() {
     userListElement.innerHTML = ''; // Limpa o conteúdo HTML do elemento userListElement
 
     userList.forEach(function (user) {
-        let listItem = document.createElement('li');
-        listItem.innerHTML = `<span class="user-date">(Data: ${user.date})</span>
-                            <span class="user-email">(Email: ${user.email})</span>
-                            <span class="user-username">(Nome de Usuário: ${user.username})</span>
-                            <button class="delete-button" onclick="deleteUser(${user.id})">Excluir</button>`;
+        let listItem = document.createElement('tr');
+        listItem.innerHTML = `<td>${user.date}</td>
+                            <td>${user.email}</td>
+                            <td>${user.username})</td>
+                            <td><button class="delete-button" onclick="deleteUser(${user.id})">Excluir</button></td>`;
         userListElement.appendChild(listItem);
     });
 }
@@ -137,11 +137,11 @@ function searchUsers() {
         }
     }
     arraySearch.forEach(function (user) {
-        let listItem = document.createElement('li');
-        listItem.innerHTML = `<span class="user-date">(Data: ${user.date})</span>
-                            <span class="user-email">(Email: ${user.email})</span>
-                            <span class="user-username">(Nome de Usuário: ${user.username})</span>
-                            <button class="delete-button" onclick="deleteUser(${user.id})">Excluir</button>`;
+        let listItem = document.createElement('tr');
+        listItem.innerHTML = `<td>${user.date}</td>
+                            <td>${user.email}</td>
+                            <td>${user.username})</td>
+                            <td><button class="delete-button" onclick="deleteUser(${user.id})">Excluir</button></td>`;
         userListElement.appendChild(listItem);
     });
 }
