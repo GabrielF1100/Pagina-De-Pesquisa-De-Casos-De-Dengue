@@ -34,7 +34,6 @@
             <li><a href="index.html">Início</a></li>
             <li><a href="informes.html">Informações</a></li>
             <li><a href="login.html">Login</a></li>
-            <li><a href="admin.html">Admin</a></li>
           </ul>
         </div>
       </nav>
@@ -42,24 +41,26 @@
 
     <div class="bg-main">
       <div class="container">
-        <form class="form" action="login.html" method="GET">
+        <form class="form" id="cadForm">
           <h2>Cadastro</h2>
           <div class="input-group">
-            <input class="one" type="text" placeholder="Nome" required />
-            <input class="two" type="text" placeholder="Sobrenome" required />
+            <input class="one" type="text" id="firstName" placeholder="Nome" required autocomplete="off" />
+            <input class="two" type="text" id="lastName" placeholder="Sobrenome" required autocomplete="off" />
           </div>
           <div class="input-group">
-            <input class="one" type="email" placeholder="Email" required />
-            <input class="two" type="tel" placeholder="Telefone" required />
+            <input class="one" type="email" id="email" placeholder="Email" required autocomplete="off" />
+            <input class="two" type="tel" id="phone" placeholder="Telefone" required autocomplete="off" />
           </div>
           <div class="input-group">
             <input
               class="one"
               type="text"
+              id="username"
               placeholder="Nome de usuário"
               required
+              autocomplete="off" 
             />
-            <input class="two" type="password" placeholder="Senha" required />
+            <input class="two" type="password" id="password" placeholder="Senha" required autocomplete="off" />
           </div>
           <div class="center">
             <button type="submit">Cadastrar</button>
@@ -73,5 +74,6 @@
       </footer>
     </div>
 
+    <script src="scripts/scripts.js"> </script>
   </body>
 </html>

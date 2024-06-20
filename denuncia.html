@@ -18,7 +18,6 @@
     />
     <link rel="icon" href="images/dengue_icon.png" />
     <link rel="stylesheet" href="styles/styles.css" />
-    <script src="scripts.js"></script>
   </head>
 
   <body>
@@ -34,6 +33,7 @@
           <ul>
             <li><a href="denuncia.html" class="active">Denunciar</a></li>
             <li><a href="perfil.html">Perfil</a></li>
+            <li><a href="admin.html" id="adminLink" style="display: none;">Admin</a></li>
           </ul>
         </div>
       </nav>
@@ -41,7 +41,7 @@
 
     <div class="bg-main">
       <div class="container">
-        <form class="form">
+        <form class="form" id="denForm">
           <h2>Denunciar Foco de Dengue</h2>
   
           <div class="input-group">
@@ -84,6 +84,7 @@
               name="cidade"
               placeholder="Informe a cidade"
               required
+              autocomplete="off" 
             />
           </div>
   
@@ -96,6 +97,7 @@
               name="bairro"
               placeholder="Informe o bairro"
               required
+              autocomplete="off" 
             />
   
             <label for="rua"><strong>Logradouro:</strong></label>
@@ -106,6 +108,7 @@
               name="rua"
               placeholder="Informe o logradouro"
               required
+              autocomplete="off" 
             />
           </div>
   
@@ -122,6 +125,7 @@
               name="complemento"
               placeholder="Descreva o local"
               required
+              autocomplete="off" 
             />
           </div>
   
@@ -134,6 +138,7 @@
               placeholder="Informe a sua denúncia"
               rows="4"
               required
+              autocomplete="off" 
             ></textarea>
           </div>
   
@@ -148,5 +153,6 @@
       </footer>
     </div>
 
+    <script src="scripts/scripts.js"> </script>
   </body>
 </html>

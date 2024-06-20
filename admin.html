@@ -24,9 +24,8 @@
                 </div>
 
                 <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="informes.html">Informações</a></li>
-                    <li><a href="login.html">Login</a></li>
+                    <li><a href="denuncia.html">Denunciar</a></li>
+                    <li><a href="perfil.html">Perfil</a></li>
                     <li><a href="admin.html" class="active">Admin</a></li>
                 </ul>
             </div>
@@ -38,23 +37,23 @@
             <form class="form" id="registrationForm">
                 <h2>Cadastrar novos usuários</h2>
                 <div class="input-group">
-                    <input class="one" type="text" id="firstName" placeholder="Nome" required />
-                    <input class="two" type="text" id="lastName" placeholder="Sobrenome" required />
+                    <input class="one" type="text" id="firstName" placeholder="Nome" required autocomplete="off" />
+                    <input class="two" type="text" id="lastName" placeholder="Sobrenome" required autocomplete="off" />
                 </div>
                 <div class="input-group">
-                    <input class="one" type="email" id="email" placeholder="Email" required />
-                    <input class="two" type="tel" id="phone" placeholder="Telefone" required />
+                    <input class="one" type="email" id="email" placeholder="Email" required autocomplete="off" />
+                    <input class="two" type="tel" id="phone" placeholder="Telefone" required autocomplete="off" />
                 </div>
                 <div class="input-group">
-                    <input class="one" type="text" id="username" placeholder="Nome de usuário" required />
-                    <input class="two" type="password" id="password" placeholder="Senha" required />
+                    <input class="one" type="text" id="username" placeholder="Nome de usuário" required autocomplete="off" />
+                    <input class="two" type="password" id="password" placeholder="Senha" required autocomplete="off" />
                 </div>
                 <div class="center" id="two-btn">
-                    <button type="submit">Cadastrar</button>
-                    <button onclick="clearFormFields()">Limpar Campos</button>
+                    <button id="btn-clr" onclick="clearFormFields()">Limpar Campos</button>
+                    <button id="btn-cad" type="submit">Cadastrar</button>
                 </div>
                 <div class="center" id="btn-list">
-                    <button onclick="searchUsers()">Pesquisar pelo Email</button>
+                    <button id="btn-busca" onclick="searchUsers()">Pesquisar pelo Email</button>
                     <button onclick="excluirLista()" type="submit">Excluir Lista</button>
                 </div>
                 <table id="listUsers" border="1">

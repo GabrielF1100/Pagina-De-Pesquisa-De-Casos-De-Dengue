@@ -34,7 +34,6 @@
             <li><a href="index.html">Início</a></li>
             <li><a href="informes.html">Informações</a></li>
             <li><a href="login.html" class="active">Login</a></li>
-            <li><a href="admin.html">Admin</a></li>
           </ul>
         </div>
       </nav>
@@ -42,13 +41,13 @@
 
     <div class="bg-main">
       <div class="container">
-        <form class="form" action="denuncia.html" method="GET">
+        <form class="form" id="loginForm">
           <h2>Login</h2>
           <div class="center">
-            <input type="text" placeholder="Nome de usuário" required />
+            <input type="text" id="username" placeholder="Nome de usuário" required />
           </div>
           <div class="center">
-            <input type="password" placeholder="Senha" required />
+            <input type="password" id="password" placeholder="Senha" required />
           </div>
           <div class="center">
             <button type="submit">Entrar</button>
@@ -64,5 +63,6 @@
       </footer>
     </div>
 
+    <script src="scripts/scripts.js"> </script>
   </body>
 </html>

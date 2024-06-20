@@ -33,6 +33,7 @@
           <ul>
             <li><a href="denuncia.html">Denunciar</a></li>
             <li><a href="perfil.html" class="active">Perfil</a></li>
+            <li><a href="admin.html" id="adminLink" style="display: none;">Admin</a></li>
           </ul>
         </div>
       </nav>
@@ -44,27 +45,35 @@
           <h2>Seu Perfil</h2>
   
           <hr />
-          <div class="user-info">
+          <div id="user-info">
             <h3>Informações Pessoais</h3>
-            <p><strong>Nome:</strong> João</p>
-            <p><strong>Sobrenome:</strong> Silva</p>
-            <p><strong>Email:</strong> joao@example.com</p>
-            <p><strong>Telefone:</strong> (11) 1234-5678</p>
+            <p><strong>Nome:</strong> <span id="firstName"></span></p>
+            <p><strong>Sobrenome:</strong> <span id="lastName"></span></p>
+            <p><strong>Email:</strong> <span id="email"></span></p>
+            <p><strong>Telefone:</strong> <span id="phone"></span></p>
           </div>
           <br /><br /><br />
   
           <hr />
-          <div class="user-history">
+          <div id="user-history">
             <h3>Histórico de Denúncias</h3>
-            <ul>
-              <li>Denúncia 1</li>
-              <li>Denúncia 2</li>
-              <li>Denúncia 3</li>
-              <!-- Adicione mais itens conforme necessário -->
-            </ul>
+            <table id="listDenuncia" border="1">
+              <thead>
+                  <tr>
+                      <th>Data</th>
+                      <th>Cidade</th>
+                      <th>Bairro</th>
+                      <th>Logradouro</th>
+                      <th>Número / Complemento</th>
+                      <th>Descrição da Denúncia</th>
+                  </tr>
+              </thead>
+              <tbody id="denuncia">
+              </tbody>
+          </table>
           </div>
   
-          <a href="login.html" class="button-login">Sair da Conta</a>
+          <a href="login.html" class="button-login" id="exitAccount">Sair da Conta</a>
         </section>
       </div>
   
@@ -74,5 +83,6 @@
 
     </div>
 
+    <script src="scripts/scripts.js"> </script>
   </body>
 </html>
